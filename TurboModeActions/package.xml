@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Meta>
+  <title>Turbo Actions</title>
+  <id>omegaplatinum.elin.turboactions</id>
+  <author>OmegaPlatinum</author>
+  <loadPriority>100</loadPriority>
+  <description>
+    Supports Game Version: 0.23.44
+
+    Speed up all in-game actions with customizable settings.
+
+    - Enables a toggleable Turbo Mode for faster actions.
+    - Configurable speed multiplier for actions.
+    - In-game toggle key.
+
+    [h1] Configuration Variables [/h1]
+
+    [h2] Enable Turbo Actions Mod [/h2]
+    Enable or disable the Turbo Actions mod.
+    [code] Default: true [/code]
+
+    [h2] Turbo Actions Speed Multiplier [/h2]
+    Set the speed multiplier for Turbo Actions.
+    [code] Default: 2 (2x speed multiplier) [/code]
+
+    [h2] Turbo Actions Toggle Key [/h2]
+    Key to toggle Turbo Actions on or off in-game.
+    [code] Default: T [/code]
+
+    [h1] Configuration File Location [/h1]
+    [code] Steam\steamapps\common\Elin\BepInEx\config\omegaplatinum.elin.turboactions.cfg [/code]
+
+    ゲーム内のすべてのアクションを高速化するためのカスタマイズ可能な設定。
+
+    - アクションを高速化するための切り替え可能なターボモードを有効にします。
+    - アクションのスピード倍率を設定可能。
+    - ゲーム内で動的に制御できる切り替えキーを提供。
+
+    [h1] 設定変数 [/h1]
+
+    [h2] ターボアクションMODの有効化 [/h2]
+    ターボアクションMODを有効または無効にします。
+    [code] デフォルト: true [/code]
+
+    [h2] ターボアクションスピード倍率 [/h2]
+    ターボアクションのスピード倍率を設定します。
+    [code] デフォルト: 2（2倍速） [/code]
+
+    [h2] ターボアクション切り替えキー [/h2]
+    ゲーム内でターボアクションをオンまたはオフに切り替えるキー。
+    [code] デフォルト: T [/code]
+
+    [h1] 設定ファイルの場所 [/h1]
+    [code] Steam\steamapps\common\Elin\BepInEx\config\omegaplatinum.elin.turboactions.cfg [/code]
+  </description>
+  <version>0.23.44</version>
+</Meta>
