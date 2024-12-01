@@ -13,6 +13,14 @@
     - Configurable speed multiplier for actions.
     - In-game toggle key.
 
+    [h1] Difference from Instant Actions Mod [/h1]
+    Unlike the Instant Actions mod, which removes progress bars and animations entirely for immediate actions, Turbo Actions speeds up gameplay by increasing game or world speed while keeping progress bars and animations intact.
+
+    [h1] Compatibility with Instant Actions Mod [/h1]
+    Turbo Actions and Instant Actions can be used together or separate:
+    - [b]Turbo Actions[/b]: Accelerates actions by increasing game and world speed, retaining progress bars and animations.
+    - [b]Instant Actions[/b]: Completely skips progress bars and animations for instant completion of actions without altering game speed.
+
     [h1] Configuration Variables [/h1]
 
     [h2] Enable Turbo Actions Mod [/h2]
@@ -34,7 +42,15 @@
 
     - アクションを高速化するための切り替え可能なターボモードを有効にします。
     - アクションのスピード倍率を設定可能。
-    - ゲーム内で動的に制御できる切り替えキーを提供。
+    - ゲーム内で動的に制御できる切り替えキーを提供します。
+
+    [h1] インスタントアクションMODとの違い [/h1]
+    インスタントアクションMODがプログレスバーとアニメーションを完全に削除してアクションを即座に完了させるのに対し、ターボアクションMODはゲームやワールドスピードを加速しながらプログレスバーとアニメーションを保持します。ターボアクションは、視覚的フィードバックを維持しつつ、よりダイナミックでテンポの速いゲームプレイを提供します。
+
+    [h1] インスタントアクションMODとの併用 [/h1]
+    ターボアクションMODとインスタントアクションMODは、お互いを補完するように設計されています。それぞれ単独で使用することも、併用して高いカスタマイズ性を楽しむことも可能です:
+    - **ターボアクション**: ゲームおよびワールドスピードを変更してアクションを加速させ、進行アニメーションを維持します。
+    - **インスタントアクション**: プログレスバーとアニメーションを完全にスキップして、ゲームスピードを変更せずにアクションを即座に完了させます。
 
     [h1] 設定変数 [/h1]
 
