@@ -11,6 +11,7 @@
     - Enables a toggleable Turbo Mode for faster actions.
     - Configurable speed multiplier for actions.
     - In-game toggle key.
+    - Optional Turbo Movement configuration.
 
     [h1] Difference from Instant Actions Mod [/h1]
     Unlike the Instant Actions mod, which removes progress bars and animations entirely for immediate actions, Turbo Actions speeds up gameplay by increasing game or world speed while keeping progress bars and animations intact.
@@ -34,6 +35,10 @@
     Key to toggle Turbo Actions on or off in-game.
     [code] Default: T [/code]
 
+    [h2] Enable Turbo Movement [/h2]
+    Enable or disable turbo speed for movement actions.
+    [code] Default: false [/code]
+
     [h1] Configuration File Location [/h1]
     [code] Steam\steamapps\common\Elin\BepInEx\config\omegaplatinum.elin.turboactions.cfg [/code]
 
@@ -42,9 +47,10 @@
     - アクションを高速化するための切り替え可能なターボモードを有効にします。
     - アクションのスピード倍率を設定可能。
     - ゲーム内で動的に制御できる切り替えキーを提供します。
+    - 手動移動アクションのターボスピードを設定可能。
 
     [h1] インスタントアクションMODとの違い [/h1]
-    インスタントアクションMODがプログレスバーとアニメーションを完全に削除してアクションを即座に完了させるのに対し、ターボアクションMODはゲームやワールドスピードを加速しながらプログレスバーとアニメーションを保持します。ターボアクションは、視覚的フィードバックを維持しつつ、よりダイナミックでテンポの速いゲームプレイを提供します。
+    インスタントアクションMODがプログレスバーとアニメーションを完全に削除してアクションを即座に完了させるのに対し、ターボアクションMODはゲームやワールドスピードを加速しながらプログレスバーとアニメーションを保持します。
 
     [h1] インスタントアクションMODとの併用 [/h1]
     ターボアクションMODとインスタントアクションMODは、お互いを補完するように設計されています。それぞれ単独で使用することも、併用して高いカスタマイズ性を楽しむことも可能です:
@@ -64,6 +70,10 @@
     [h2] ターボアクション切り替えキー [/h2]
     ゲーム内でターボアクションをオンまたはオフに切り替えるキー。
     [code] デフォルト: T [/code]
+
+    [h2] 手動移動アクションのターボスピード [/h2]
+    手動移動アクションでターボスピードを有効または無効にします。
+    [code] デフォルト: false [/code]
 
     [h1] 設定ファイルの場所 [/h1]
     [code] Steam\steamapps\common\Elin\BepInEx\config\omegaplatinum.elin.turboactions.cfg [/code]

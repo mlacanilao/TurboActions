@@ -8,6 +8,7 @@ namespace TurboActions
         internal static ConfigEntry<bool> EnableTurboMode;
         internal static ConfigEntry<int> TurboModeSpeedMultiplier;
         internal static ConfigEntry<KeyCode> ToggleTurboKey;
+        internal static ConfigEntry<bool> EnableTurboMove;
 
         internal static void LoadConfig(ConfigFile config)
         {
@@ -32,6 +33,18 @@ namespace TurboActions
                              "0より大きい整数値である必要があります（例: 倍速の場合は2）。\n" +
                              "设置快速动作的速度倍数。\n" +
                              "必须为大于 0 的整数值（例如，2 表示两倍速度）。");
+            
+            EnableTurboMove = config.Bind(
+                section: ModInfo.Name,
+                key: "Enable Turbo Movement",
+                defaultValue: false,
+                description: "Enable or disable turbo speed for movement actions.\n" +
+                             "Set to 'true' to allow movement actions to use turbo speed, or 'false' to disable it.\n" +
+                             "移動アクションにターボスピードを適用するかどうかを設定します。\n" +
+                             "'true' に設定すると移動アクションにターボスピードが適用されます。'false' に設定すると無効になります。\n" +
+                             "启用或禁用移动动作的快速速度。\n" +
+                             "设置为 'true' 允许移动动作使用快速速度，设置为 'false' 禁用快速速度。"
+            );
 
             ToggleTurboKey = config.Bind(
                 section: ModInfo.Name,
