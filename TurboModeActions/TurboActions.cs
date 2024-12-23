@@ -8,7 +8,7 @@ namespace TurboActions
     {
         internal const string Guid = "omegaplatinum.elin.turboactions";
         internal const string Name = "Turbo Actions";
-        internal const string Version = "1.0.0.0";
+        internal const string Version = "1.0.3.0";
     }
 
     [BepInPlugin(GUID: ModInfo.Guid, Name: ModInfo.Name, Version: ModInfo.Version)]
@@ -29,9 +29,44 @@ namespace TurboActions
             if (Input.GetKeyDown(key: TurboActionsConfig.ToggleTurboKey.Value))
             {
                 TurboActionsConfig.EnableTurboMode.Value = !TurboActionsConfig.EnableTurboMode.Value;
-                string status = TurboActionsConfig.EnableTurboMode.Value ? "enabled" : "disabled";
-                ELayer.pc.TalkRaw(text: $"Turbo Actions {status}.", ref1: null, ref2: null, forceSync: false);
+
+                if (TurboActionsConfig.EnableTurboMode?.Value == false)
+                {
+                    ActionMode.Adv.SetTurbo(mtp: 0);
+                }
+
+                string status = TurboActionsConfig.EnableTurboMode != null && TurboActionsConfig.EnableTurboMode.Value
+                    ? __(ja: "有効", en: "enabled", cn: "启用")
+                    : __(ja: "無効", en: "disabled", cn: "禁用");
+
+                ELayer.pc.TalkRaw(
+                    text: __(ja: $"Turbo Actions {status}。",
+                        en: $"Turbo Actions {status}.",
+                        cn: $"Turbo Actions {status}。"),
+                    ref1: null,
+                    ref2: null,
+                    forceSync: false);
             }
+        }
+        
+        private static string __(string ja = "", string en = "", string cn = "")
+        {
+            if (Lang.langCode == "JP")
+            {
+                return ja ?? en;
+            }
+
+            if (Lang.langCode == "CN")
+            {
+                return cn ?? en;
+            }
+
+            return en;
+        }
+        
+        public static void Log(object payload)
+        {
+            Instance.Logger.LogInfo(data: payload);
         }
     }
 
@@ -41,11 +76,17 @@ namespace TurboActions
         [HarmonyPostfix]
         public static void Postfix(AIAct __instance)
         {
-            if (TurboActionsConfig.EnableTurboMode?.Value == true)
+            if (TurboActionsConfig.EnableTurboMode?.Value == false)
             {
-                int turboSpeed = TurboActionsConfig.TurboModeSpeedMultiplier?.Value ?? 2;
-                ActionMode.Adv.SetTurbo(mtp: turboSpeed);
+                return;
             }
+            
+            if (__instance?.owner?.IsPC == false)
+            {
+                return;
+            }
+            
+            ActionMode.Adv.SetTurbo(mtp: TurboActionsConfig.TurboModeSpeedMultiplier.Value);
         }
     }
 }
