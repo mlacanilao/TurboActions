@@ -8,7 +8,7 @@ namespace TurboActions
     {
         internal const string Guid = "omegaplatinum.elin.turboactions";
         internal const string Name = "Turbo Actions";
-        internal const string Version = "1.1.3.2";
+        internal const string Version = "1.1.3.3";
     }
 
     [BepInPlugin(GUID: ModInfo.Guid, Name: ModInfo.Name, Version: ModInfo.Version)]
