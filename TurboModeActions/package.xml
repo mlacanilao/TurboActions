@@ -42,7 +42,7 @@
     [h1] Configuration File Location [/h1]
     [code] Steam\steamapps\common\Elin\BepInEx\config\omegaplatinum.elin.turboactions.cfg [/code]
 
-    Supports Game Version: 0.23.65
+    Supports Game Version: 0.23.83
 
     - アクションを高速化するための切り替え可能なターボモードを有効にします。
     - アクションのスピード倍率を設定可能。
@@ -78,8 +78,8 @@
     [h1] 設定ファイルの場所 [/h1]
     [code] Steam\steamapps\common\Elin\BepInEx\config\omegaplatinum.elin.turboactions.cfg [/code]
 
-    対応ゲームバージョン: 0.23.65
+    対応ゲームバージョン: 0.23.83
   </description>
   <tags>QoL</tags>
-  <version>0.23.65</version>
+  <version>0.23.83</version>
 </Meta>

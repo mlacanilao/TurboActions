@@ -8,7 +8,7 @@ namespace TurboActions
     {
         internal const string Guid = "omegaplatinum.elin.turboactions";
         internal const string Name = "Turbo Actions";
-        internal const string Version = "1.1.3.3";
+        internal const string Version = "1.1.4.3";
     }
 
     [BepInPlugin(GUID: ModInfo.Guid, Name: ModInfo.Name, Version: ModInfo.Version)]
@@ -28,11 +28,17 @@ namespace TurboActions
         {
             if (Input.GetKeyDown(key: TurboActionsConfig.ToggleTurboKey.Value))
             {
+                if (EClass.core?.IsGameStarted == false)
+                {
+                    return;
+                }
+                
                 TurboActionsConfig.EnableTurboMode.Value = !TurboActionsConfig.EnableTurboMode.Value;
 
                 if (TurboActionsConfig.EnableTurboMode?.Value == false)
                 {
-                    ActionMode.Adv.SetTurbo(mtp: 0);
+                    ActionMode.Adv.SetTurbo(mtp: -1);
+                    EClass._map?.charas?.ForEach(action: chara => chara.roundTimer = 0f);
                 }
 
                 string status = TurboActionsConfig.EnableTurboMode != null && TurboActionsConfig.EnableTurboMode.Value
@@ -70,29 +76,23 @@ namespace TurboActions
         }
     }
 
-    [HarmonyPatch(declaringType: typeof(AIAct), methodName: nameof(AIAct.Start))]
+    [HarmonyPatch(declaringType: typeof(AIAct))]
     internal static class TurboActionsPatch
     {
         [HarmonyPostfix]
-        public static void Postfix(AIAct __instance)
+        [HarmonyPatch(methodName: nameof(AIAct.Start))]
+        public static void StartPostfix(AIAct __instance)
         {
-            if (TurboActionsConfig.EnableTurboMode?.Value == false)
-            {
-                return;
-            }
-            
-            if (__instance?.owner?.IsPC == false)
-            {
-                return;
-            }
+            if (TurboActionsConfig.EnableTurboMode?.Value == false) return;
+            if (__instance?.owner?.IsPC == false) return;
 
             if (TurboActionsConfig.EnableTurboMove?.Value == false &&
-                (__instance is GoalManualMove || __instance is AI_Goto))
+                (__instance is GoalManualMove || __instance is AI_Goto)) return;
+
+            if (AM_Adv.turbo != TurboActionsConfig.TurboModeSpeedMultiplier.Value)
             {
-                return;
+                ActionMode.Adv.SetTurbo(mtp: TurboActionsConfig.TurboModeSpeedMultiplier.Value);
             }
-            
-            ActionMode.Adv.SetTurbo(mtp: TurboActionsConfig.TurboModeSpeedMultiplier.Value);
         }
     }
 }
