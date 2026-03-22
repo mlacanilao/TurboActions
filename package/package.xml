@@ -8,6 +8,7 @@
     Speed up all in-game actions with customizable settings.
     ゲーム内のすべてのアクションを高速化するためのカスタマイズ可能な設定。
 
+    [h1] Features [/h1]
     - Enables a toggleable Turbo Mode for faster actions.
     - Configurable speed multiplier for actions.
     - In-game toggle key.
@@ -30,6 +31,7 @@
     [h2] Turbo Actions Speed Multiplier [/h2]
     Set the speed multiplier for Turbo Actions.
     [code] Default: 2 (2x speed multiplier) [/code]
+    Note: Very high multipliers can make the game take a while to return to normal speed. If that happens, toggle Turbo Actions off to restore normal behavior.
 
     [h2] Turbo Actions Toggle Key [/h2]
     Key to toggle Turbo Actions on or off in-game.
@@ -42,8 +44,9 @@
     [h1] Configuration File Location [/h1]
     [code] Steam\steamapps\common\Elin\BepInEx\config\omegaplatinum.elin.turboactions.cfg [/code]
 
-    Supports Game Version: 0.23.83
+    [img] https://img.shields.io/badge/Supports%20Game%20Version-EA%2023.287%20Stable-green [/img]
 
+    [h1] 特徴 [/h1]
     - アクションを高速化するための切り替え可能なターボモードを有効にします。
     - アクションのスピード倍率を設定可能。
     - ゲーム内で動的に制御できる切り替えキーを提供します。
@@ -66,6 +69,7 @@
     [h2] ターボアクションスピード倍率 [/h2]
     ターボアクションのスピード倍率を設定します。
     [code] デフォルト: 2（2倍速） [/code]
+    注意: 倍率を高くしすぎると、ゲーム速度が通常に戻るまで時間がかかる場合があります。その場合は Turbo Actions をオフにすると通常動作に戻ります。
 
     [h2] ターボアクション切り替えキー [/h2]
     ゲーム内でターボアクションをオンまたはオフに切り替えるキー。
@@ -78,8 +82,8 @@
     [h1] 設定ファイルの場所 [/h1]
     [code] Steam\steamapps\common\Elin\BepInEx\config\omegaplatinum.elin.turboactions.cfg [/code]
 
-    対応ゲームバージョン: 0.23.83
+    [img] https://img.shields.io/badge/対応ゲームバージョン-EA%2023.287%20Stable-green [/img]
   </description>
   <tags>QoL</tags>
-  <version>0.23.83</version>
+  <version>0.23.287</version>
 </Meta>
