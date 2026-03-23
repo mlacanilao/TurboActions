@@ -17,11 +17,9 @@
     </PropertyGroup>
     <ItemGroup>
         <Compile Remove="package\**"/>
-		<Compile Remove="references\**\*.cs"/>
     </ItemGroup>
     <ItemGroup>
         <EmbeddedResource Remove="package\**"/>
-        <EmbeddedResource Remove="references\**\*.cs"/>
     </ItemGroup>
     <ItemGroup>
         <None Remove="Directory.Build.props"/>
