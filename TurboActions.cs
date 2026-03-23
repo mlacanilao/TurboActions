@@ -142,7 +142,7 @@ internal static class TurboActionsPatch
             return;
         }
 
-        if (__instance?.owner?.IsPC == false)
+        if (__instance?.owner?.IsPC != true)
         {
             return;
         }
