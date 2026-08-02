@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ConfigLayoutSchema.xsd">
+    <hlayout id="TurboActionsLayout">
+        <vlayout id="TurboActionsGroup" border="true">
+            <title>config.turbo_actions.title</title>
+            <text id="TurboActionsDescription">config.turbo_actions.description</text>
+
+            <toggle id="EnableTurboModeToggle">
+                <contentId>config.enable_turbo_actions.name</contentId>
+                <tooltip>config.enable_turbo_actions.tooltip</tooltip>
+            </toggle>
+
+            <topic>config.base_multiplier.title</topic>
+            <text id="TurboModeSpeedMultiplierDescription">config.base_multiplier.description</text>
+            <input id="TurboModeSpeedMultiplierInput" char_limit="12">
+                <placeholder>config.integer.placeholder</placeholder>
+            </input>
+
+            <toggle id="EnableTurboMoveToggle">
+                <contentId>config.enable_turbo_movement.name</contentId>
+                <tooltip>config.enable_turbo_movement.tooltip</tooltip>
+            </toggle>
+
+            <topic>config.toggle_turbo_key.title</topic>
+            <text id="ToggleTurboKeyDescription">config.toggle_turbo_key.description</text>
+            <one_choice id="ToggleTurboKeyDropdown" type="dropdown">
+                <choice>
+                    <contentId>config.dropdown.placeholder</contentId>
+                </choice>
+            </one_choice>
+        </vlayout>
+    </hlayout>
+
+    <hlayout id="GameSpeedTurbo1Layout">
+        <vlayout id="GameSpeedTurbo1Group" border="true">
+            <title>config.game_speed_turbo_1.title</title>
+            <text id="GameSpeedTurbo1Description">config.preset.description</text>
+
+            <topic>config.preset_multiplier.title</topic>
+            <input id="GameSpeedTurbo1MultiplierInput" char_limit="12">
+                <placeholder>config.integer.placeholder</placeholder>
+            </input>
+
+            <topic>config.preset_hotkey.title</topic>
+            <text id="GameSpeedTurbo1HotkeyDescription">config.preset_hotkey.description</text>
+            <hlayout id="GameSpeedTurbo1HotkeyLayout">
+                <vlayout id="GameSpeedTurbo1ModifierLayout">
+                    <text id="GameSpeedTurbo1ModifierLabel">config.hotkey_modifier.name</text>
+                    <one_choice id="GameSpeedTurbo1ModifierDropdown" type="dropdown">
+                        <choice>
+                            <contentId>config.dropdown.placeholder</contentId>
+                        </choice>
+                    </one_choice>
+                </vlayout>
+                <vlayout id="GameSpeedTurbo1MainKeyLayout">
+                    <text id="GameSpeedTurbo1MainKeyLabel">config.hotkey_main_key.name</text>
+                    <one_choice id="GameSpeedTurbo1MainKeyDropdown" type="dropdown">
+                        <choice>
+                            <contentId>config.dropdown.placeholder</contentId>
+                        </choice>
+                    </one_choice>
+                </vlayout>
+            </hlayout>
+        </vlayout>
+    </hlayout>
+
+    <hlayout id="GameSpeedTurbo2Layout">
+        <vlayout id="GameSpeedTurbo2Group" border="true">
+            <title>config.game_speed_turbo_2.title</title>
+            <text id="GameSpeedTurbo2Description">config.preset.description</text>
+
+            <topic>config.preset_multiplier.title</topic>
+            <input id="GameSpeedTurbo2MultiplierInput" char_limit="12">
+                <placeholder>config.integer.placeholder</placeholder>
+            </input>
+
+            <topic>config.preset_hotkey.title</topic>
+            <text id="GameSpeedTurbo2HotkeyDescription">config.preset_hotkey.description</text>
+            <hlayout id="GameSpeedTurbo2HotkeyLayout">
+                <vlayout id="GameSpeedTurbo2ModifierLayout">
+                    <text id="GameSpeedTurbo2ModifierLabel">config.hotkey_modifier.name</text>
+                    <one_choice id="GameSpeedTurbo2ModifierDropdown" type="dropdown">
+                        <choice>
+                            <contentId>config.dropdown.placeholder</contentId>
+                        </choice>
+                    </one_choice>
+                </vlayout>
+                <vlayout id="GameSpeedTurbo2MainKeyLayout">
+                    <text id="GameSpeedTurbo2MainKeyLabel">config.hotkey_main_key.name</text>
+                    <one_choice id="GameSpeedTurbo2MainKeyDropdown" type="dropdown">
+                        <choice>
+                            <contentId>config.dropdown.placeholder</contentId>
+                        </choice>
+                    </one_choice>
+                </vlayout>
+            </hlayout>
+        </vlayout>
+    </hlayout>
+
+    <hlayout id="GameSpeedTurbo3Layout">
+        <vlayout id="GameSpeedTurbo3Group" border="true">
+            <title>config.game_speed_turbo_3.title</title>
+            <text id="GameSpeedTurbo3Description">config.preset.description</text>
+
+            <topic>config.preset_multiplier.title</topic>
+            <input id="GameSpeedTurbo3MultiplierInput" char_limit="12">
+                <placeholder>config.integer.placeholder</placeholder>
+            </input>
+
+            <topic>config.preset_hotkey.title</topic>
+            <text id="GameSpeedTurbo3HotkeyDescription">config.preset_hotkey.description</text>
+            <hlayout id="GameSpeedTurbo3HotkeyLayout">
+                <vlayout id="GameSpeedTurbo3ModifierLayout">
+                    <text id="GameSpeedTurbo3ModifierLabel">config.hotkey_modifier.name</text>
+                    <one_choice id="GameSpeedTurbo3ModifierDropdown" type="dropdown">
+                        <choice>
+                            <contentId>config.dropdown.placeholder</contentId>
+                        </choice>
+                    </one_choice>
+                </vlayout>
+                <vlayout id="GameSpeedTurbo3MainKeyLayout">
+                    <text id="GameSpeedTurbo3MainKeyLabel">config.hotkey_main_key.name</text>
+                    <one_choice id="GameSpeedTurbo3MainKeyDropdown" type="dropdown">
+                        <choice>
+                            <contentId>config.dropdown.placeholder</contentId>
+                        </choice>
+                    </one_choice>
+                </vlayout>
+            </hlayout>
+        </vlayout>
+    </hlayout>
+</config>

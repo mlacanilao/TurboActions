@@ -26,6 +26,12 @@
         <None Remove="LICENSE"/>
         <None Remove="README.md"/>
     </ItemGroup>
+    <ItemGroup>
+        <Reference Include="ModOptions">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\2135150\3381182341\ModOptions.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
     <Target Name="CopyAssets" AfterTargets="AfterBuild">
         <ItemGroup>
             <Assets Include="package\**\*.*"/>

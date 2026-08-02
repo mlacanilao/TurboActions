@@ -5,85 +5,101 @@
   <author>OmegaPlatinum</author>
   <loadPriority>100</loadPriority>
   <description>
-    Speed up all in-game actions with customizable settings.
-    ゲーム内のすべてのアクションを高速化するためのカスタマイズ可能な設定。
+    Apply a configurable game speed turbo multiplier during gameplay.
+    ゲームプレイ中に、設定可能なゲームスピードのターボ倍率を適用します。
 
     [h1] Features [/h1]
-    - Enables a toggleable Turbo Mode for faster actions.
-    - Configurable speed multiplier for actions.
-    - In-game toggle key.
-    - Optional Turbo Movement configuration.
+    [list]
+    [*] Turn Turbo Actions on or off during gameplay with a customizable key.
+    [*] Speed up actions and the passage of game time while keeping progress bars and animations.
+    [*] Choose whether the Turbo Actions base multiplier also applies to movement.
+    [*] Switch the live Turbo Actions base multiplier with three configurable preset hotkeys without turning Turbo Actions on.
+    [*] If gameplay becomes out of sync or behaves unexpectedly, toggle Turbo Actions off and back on to reset its timing.
+    [/list]
 
-    [h1] Difference from Instant Actions Mod [/h1]
-    Unlike the Instant Actions mod, which removes progress bars and animations entirely for immediate actions, Turbo Actions speeds up gameplay by increasing game or world speed while keeping progress bars and animations intact.
+    [h1] Compatibility [/h1]
+    [*] Turbo Actions changes game speed while keeping progress bars and animations. Instant Actions immediately completes supported actions. The two mods can be used separately or together.
+    [*] Not compatible with other game speed mods: Game Speed Control『☆』
 
-    [h1] Compatibility with Instant Actions Mod [/h1]
-    Turbo Actions and Instant Actions can be used together or separate:
-    - [b]Turbo Actions[/b]: Accelerates actions by increasing game and world speed, retaining progress bars and animations.
-    - [b]Instant Actions[/b]: Completely skips progress bars and animations for instant completion of actions without altering game speed.
+    [h1] Configuration [/h1]
 
-    [h1] Configuration Variables [/h1]
+    Adjust these settings in the configuration file.
 
     [h2] Enable Turbo Actions Mod [/h2]
-    Enable or disable the Turbo Actions mod.
+    Turn Turbo Actions on or off.
     [code] Default: true [/code]
 
     [h2] Turbo Actions Speed Multiplier [/h2]
-    Set the speed multiplier for Turbo Actions.
-    [code] Default: 2 (2x speed multiplier) [/code]
-    Note: Very high multipliers can make the game take a while to return to normal speed. If that happens, toggle Turbo Actions off to restore normal behavior.
+    Set the Turbo Actions base multiplier used while Turbo Actions is on.
+    [code] Default: 2 [/code]
 
     [h2] Turbo Actions Toggle Key [/h2]
-    Key to toggle Turbo Actions on or off in-game.
+    Choose the key used to turn Turbo Actions on or off during gameplay.
     [code] Default: T [/code]
 
     [h2] Enable Turbo Movement [/h2]
-    Enable or disable turbo speed for movement actions.
+    Choose whether the Turbo Actions base multiplier also applies while moving.
     [code] Default: false [/code]
+
+    [h2] Game Speed Turbo Presets [/h2]
+    Choose the live Turbo Actions base multiplier without turning Turbo Actions on. Values of 0 or less use x1; Elin's turbo effects can multiply it further.
+    [code] Defaults: Left Control + 1 = x1; Left Control + 2 = x2; Left Control + 3 = x3 [/code]
+    In Mod Options, each preset hotkey editor supports one modifier and one key.
+
+    [h1] Optional Mod [/h1]
+    Mod Options is only needed for the in-game Config menu. Turbo Actions and its hotkeys work without it if you edit the configuration file manually.
 
     [h1] Configuration File Location [/h1]
     [code] Steam\steamapps\common\Elin\BepInEx\config\omegaplatinum.elin.turboactions.cfg [/code]
 
-    [img] https://img.shields.io/badge/Supports%20Game%20Version-EA%2023.287%20Stable-green [/img]
+    [img] https://img.shields.io/badge/Supports%20Game%20Version-EA%2023.325%20Patch%202%20Stable-green [/img]
 
     [h1] 特徴 [/h1]
-    - アクションを高速化するための切り替え可能なターボモードを有効にします。
-    - アクションのスピード倍率を設定可能。
-    - ゲーム内で動的に制御できる切り替えキーを提供します。
-    - 手動移動アクションのターボスピードを設定可能。
+    [list]
+    [*] 設定可能なキーで、ゲームプレイ中にTurbo Actionsをオン／オフできます。
+    [*] プログレスバーとアニメーションを残したまま、アクションとゲーム内時間の進行を高速化します。
+    [*] Turbo Actions基本倍率を移動中にも適用するか選べます。
+    [*] 3つの設定可能なプリセット用ホットキーで、Turbo Actionsをオンにせず現在のTurbo Actions基本倍率を切り替えられます。
+    [*] ゲームの進行がずれたり動作がおかしくなった場合は、Turbo Actionsを一度オフにしてから再度オンにすると、進行タイミングをリセットできます。
+    [/list]
 
-    [h1] インスタントアクションMODとの違い [/h1]
-    インスタントアクションMODがプログレスバーとアニメーションを完全に削除してアクションを即座に完了させるのに対し、ターボアクションMODはゲームやワールドスピードを加速しながらプログレスバーとアニメーションを保持します。
+    [h1] 互換性 [/h1]
+    [*] Turbo Actionsはプログレスバーとアニメーションを残したまま進行速度を変更します。Instant Actionsは対応するアクションを即座に完了させます。2つのMODは単独でも併用でも使用できます。
+    [*] 他の進行速度変更MODとは互換性がありません：Game Speed Control『☆』
 
-    [h1] インスタントアクションMODとの併用 [/h1]
-    ターボアクションMODとインスタントアクションMODは、お互いを補完するように設計されています。それぞれ単独で使用することも、併用して高いカスタマイズ性を楽しむことも可能です:
-    - **ターボアクション**: ゲームおよびワールドスピードを変更してアクションを加速させ、進行アニメーションを維持します。
-    - **インスタントアクション**: プログレスバーとアニメーションを完全にスキップして、ゲームスピードを変更せずにアクションを即座に完了させます。
+    [h1] 設定 [/h1]
 
-    [h1] 設定変数 [/h1]
+    設定ファイルで各項目を変更できます。
 
-    [h2] ターボアクションMODの有効化 [/h2]
-    ターボアクションMODを有効または無効にします。
-    [code] デフォルト: true [/code]
+    [h2] Turbo Actionsの有効化 [/h2]
+    Turbo Actionsをオンまたはオフにします。
+    [code] 初期値: true [/code]
 
-    [h2] ターボアクションスピード倍率 [/h2]
-    ターボアクションのスピード倍率を設定します。
-    [code] デフォルト: 2（2倍速） [/code]
-    注意: 倍率を高くしすぎると、ゲーム速度が通常に戻るまで時間がかかる場合があります。その場合は Turbo Actions をオフにすると通常動作に戻ります。
+    [h2] Turbo Actionsのスピード倍率 [/h2]
+    Turbo Actionsがオンのときに使うTurbo Actions基本倍率を設定します。
+    [code] 初期値: 2 [/code]
 
-    [h2] ターボアクション切り替えキー [/h2]
-    ゲーム内でターボアクションをオンまたはオフに切り替えるキー。
-    [code] デフォルト: T [/code]
+    [h2] Turbo Actionsの切り替えキー [/h2]
+    ゲームプレイ中にTurbo Actionsをオンまたはオフにするキーを設定します。
+    [code] 初期値: T [/code]
 
-    [h2] 手動移動アクションのターボスピード [/h2]
-    手動移動アクションでターボスピードを有効または無効にします。
-    [code] デフォルト: false [/code]
+    [h2] 移動中のTurbo Actions [/h2]
+    移動中にもTurbo Actions基本倍率を適用するか選びます。
+    [code] 初期値: false [/code]
+
+    [h2] ゲームスピードターボのプリセット [/h2]
+    Turbo Actionsをオンにせず、現在のTurbo Actions基本倍率を選択します。0以下の値は1倍速として扱われ、Elin本体のターボ効果が有効な場合はさらに倍率がかかります。
+    [code] 初期値: Left Control + 1 = 1倍速; Left Control + 2 = 2倍速; Left Control + 3 = 3倍速 [/code]
+    Mod Optionsの各プリセット用ホットキーでは、修飾キー1つとキー1つを編集できます。
+
+    [h1] 任意MOD [/h1]
+    Mod Options はゲーム内 Config メニューを使う場合にのみ必要です。設定ファイルを手動で編集すれば、Turbo Actions とホットキーは Mod Options なしでも動作します。
 
     [h1] 設定ファイルの場所 [/h1]
     [code] Steam\steamapps\common\Elin\BepInEx\config\omegaplatinum.elin.turboactions.cfg [/code]
 
-    [img] https://img.shields.io/badge/対応ゲームバージョン-EA%2023.287%20Stable-green [/img]
+    [img] https://img.shields.io/badge/対応ゲームバージョン-EA%2023.325%20Patch%202%20Stable-green [/img]
   </description>
   <tags>QoL</tags>
-  <version>0.23.287</version>
+  <version>0.23.325</version>
 </Meta>
