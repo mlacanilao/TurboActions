@@ -18,11 +18,12 @@
     [/list]
 
     [h1] Compatibility [/h1]
+    [list]
     [*] Turbo Actions changes game speed while keeping progress bars and animations. Instant Actions immediately completes supported actions. The two mods can be used separately or together.
-    [*] Not compatible with other game speed mods: Game Speed Control『☆』
+    [*] Not compatible with other game speed mods.
+    [/list]
 
     [h1] Configuration [/h1]
-
     Adjust these settings in the configuration file.
 
     [h2] Enable Turbo Actions Mod [/h2]
@@ -42,7 +43,7 @@
     [code] Default: false [/code]
 
     [h2] Game Speed Turbo Presets [/h2]
-    Choose the live Turbo Actions base multiplier without turning Turbo Actions on. Values of 0 or less use x1; Elin's turbo effects can multiply it further.
+    Choose the live Turbo Actions base multiplier without turning Turbo Actions on. Values of 0 or less use x1.
     [code] Defaults: Left Control + 1 = x1; Left Control + 2 = x2; Left Control + 3 = x3 [/code]
     In Mod Options, each preset hotkey editor supports one modifier and one key.
 
@@ -64,11 +65,12 @@
     [/list]
 
     [h1] 互換性 [/h1]
+    [list]
     [*] Turbo Actionsはプログレスバーとアニメーションを残したまま進行速度を変更します。Instant Actionsは対応するアクションを即座に完了させます。2つのMODは単独でも併用でも使用できます。
-    [*] 他の進行速度変更MODとは互換性がありません：Game Speed Control『☆』
+    [*] 他の進行速度変更MODとは互換性がありません。
+    [/list]
 
     [h1] 設定 [/h1]
-
     設定ファイルで各項目を変更できます。
 
     [h2] Turbo Actionsの有効化 [/h2]
@@ -88,7 +90,7 @@
     [code] 初期値: false [/code]
 
     [h2] ゲームスピードターボのプリセット [/h2]
-    Turbo Actionsをオンにせず、現在のTurbo Actions基本倍率を選択します。0以下の値は1倍速として扱われ、Elin本体のターボ効果が有効な場合はさらに倍率がかかります。
+    Turbo Actionsをオンにせず、現在のTurbo Actions基本倍率を選択します。0以下の値は1倍速として扱われます。
     [code] 初期値: Left Control + 1 = 1倍速; Left Control + 2 = 2倍速; Left Control + 3 = 3倍速 [/code]
     Mod Optionsの各プリセット用ホットキーでは、修飾キー1つとキー1つを編集できます。
 

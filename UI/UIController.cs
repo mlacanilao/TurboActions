@@ -14,6 +14,8 @@ namespace TurboActions.UI;
 
 internal static class UIController
 {
+    private const float MinimumDescriptionLabelWidth = 540f;
+    private const float DescriptionLabelHorizontalPadding = 40f;
     private const string XmlFileName = "TurboActionsConfig.xml";
     private const string TranslationFileName = "translations.xlsx";
 
@@ -196,19 +198,19 @@ internal static class UIController
                 return;
             }
 
-            turboActionsDescription.Align = TextAnchor.UpperLeft;
-            turboModeSpeedMultiplierDescription.Align = TextAnchor.UpperLeft;
-            toggleTurboKeyDescription.Align = TextAnchor.UpperLeft;
-            preset1Description.Align = TextAnchor.UpperLeft;
-            preset1HotkeyDescription.Align = TextAnchor.UpperLeft;
+            ApplyDescriptionLabelLayout(label: turboActionsDescription);
+            ApplyDescriptionLabelLayout(label: turboModeSpeedMultiplierDescription);
+            ApplyDescriptionLabelLayout(label: toggleTurboKeyDescription);
+            ApplyDescriptionLabelLayout(label: preset1Description);
+            ApplyDescriptionLabelLayout(label: preset1HotkeyDescription);
             preset1ModifierLabel.Align = TextAnchor.UpperLeft;
             preset1MainKeyLabel.Align = TextAnchor.UpperLeft;
-            preset2Description.Align = TextAnchor.UpperLeft;
-            preset2HotkeyDescription.Align = TextAnchor.UpperLeft;
+            ApplyDescriptionLabelLayout(label: preset2Description);
+            ApplyDescriptionLabelLayout(label: preset2HotkeyDescription);
             preset2ModifierLabel.Align = TextAnchor.UpperLeft;
             preset2MainKeyLabel.Align = TextAnchor.UpperLeft;
-            preset3Description.Align = TextAnchor.UpperLeft;
-            preset3HotkeyDescription.Align = TextAnchor.UpperLeft;
+            ApplyDescriptionLabelLayout(label: preset3Description);
+            ApplyDescriptionLabelLayout(label: preset3HotkeyDescription);
             preset3ModifierLabel.Align = TextAnchor.UpperLeft;
             preset3MainKeyLabel.Align = TextAnchor.UpperLeft;
 
@@ -421,6 +423,61 @@ internal static class UIController
         }
 
         return KeyCode.None;
+    }
+
+    private static void ApplyDescriptionLabelLayout(OptLabel label)
+    {
+        label.Align = TextAnchor.UpperLeft;
+        if (label.Base == null ||
+            label.Base.text1 == null)
+        {
+            return;
+        }
+
+        float width = GetAvailableDescriptionLabelWidth(transform: label.Base.text1.transform);
+        ApplyLayoutWidth(rectTransform: label.Base.GetComponent<RectTransform>(), width: width);
+        ApplyLayoutWidth(rectTransform: label.Base.text1.rectTransform, width: width);
+    }
+
+    private static float GetAvailableDescriptionLabelWidth(Transform transform)
+    {
+        Transform? current = transform;
+        for (int i = 0; i < 8 && current != null; i++)
+        {
+            if (current.name == "Content" ||
+                current.name == "Viewport")
+            {
+                RectTransform? rectTransform = current as RectTransform;
+                if (rectTransform != null &&
+                    rectTransform.rect.width > MinimumDescriptionLabelWidth)
+                {
+                    return rectTransform.rect.width - DescriptionLabelHorizontalPadding;
+                }
+            }
+
+            current = current.parent;
+        }
+
+        return MinimumDescriptionLabelWidth;
+    }
+
+    private static void ApplyLayoutWidth(RectTransform? rectTransform, float width)
+    {
+        if (rectTransform == null)
+        {
+            return;
+        }
+
+        LayoutElement? layoutElement = rectTransform.GetComponent<LayoutElement>();
+        if (layoutElement == null)
+        {
+            layoutElement = rectTransform.gameObject.AddComponent<LayoutElement>();
+        }
+
+        layoutElement.minWidth = width;
+        layoutElement.preferredWidth = width;
+        layoutElement.flexibleWidth = 0f;
+        rectTransform.SetSizeWithCurrentAnchors(axis: RectTransform.Axis.Horizontal, size: width);
     }
 
     private static T? GetRequiredPreBuild<T>(OptionUIBuilder builder, string id)

@@ -3,7 +3,9 @@
     <hlayout id="TurboActionsLayout">
         <vlayout id="TurboActionsGroup" border="true">
             <title>config.turbo_actions.title</title>
-            <text id="TurboActionsDescription">config.turbo_actions.description</text>
+            <hlayout>
+                <text id="TurboActionsDescription" width="1.0">config.turbo_actions.description</text>
+            </hlayout>
 
             <toggle id="EnableTurboModeToggle">
                 <contentId>config.enable_turbo_actions.name</contentId>
@@ -11,7 +13,9 @@
             </toggle>
 
             <topic>config.base_multiplier.title</topic>
-            <text id="TurboModeSpeedMultiplierDescription">config.base_multiplier.description</text>
+            <hlayout>
+                <text id="TurboModeSpeedMultiplierDescription" width="1.0">config.base_multiplier.description</text>
+            </hlayout>
             <input id="TurboModeSpeedMultiplierInput" char_limit="12">
                 <placeholder>config.integer.placeholder</placeholder>
             </input>
@@ -22,7 +26,9 @@
             </toggle>
 
             <topic>config.toggle_turbo_key.title</topic>
-            <text id="ToggleTurboKeyDescription">config.toggle_turbo_key.description</text>
+            <hlayout>
+                <text id="ToggleTurboKeyDescription" width="1.0">config.toggle_turbo_key.description</text>
+            </hlayout>
             <one_choice id="ToggleTurboKeyDropdown" type="dropdown">
                 <choice>
                     <contentId>config.dropdown.placeholder</contentId>
@@ -34,7 +40,9 @@
     <hlayout id="GameSpeedTurbo1Layout">
         <vlayout id="GameSpeedTurbo1Group" border="true">
             <title>config.game_speed_turbo_1.title</title>
-            <text id="GameSpeedTurbo1Description">config.preset.description</text>
+            <hlayout>
+                <text id="GameSpeedTurbo1Description" width="1.0">config.preset.description</text>
+            </hlayout>
 
             <topic>config.preset_multiplier.title</topic>
             <input id="GameSpeedTurbo1MultiplierInput" char_limit="12">
@@ -42,7 +50,9 @@
             </input>
 
             <topic>config.preset_hotkey.title</topic>
-            <text id="GameSpeedTurbo1HotkeyDescription">config.preset_hotkey.description</text>
+            <hlayout>
+                <text id="GameSpeedTurbo1HotkeyDescription" width="1.0">config.preset_hotkey.description</text>
+            </hlayout>
             <hlayout id="GameSpeedTurbo1HotkeyLayout">
                 <vlayout id="GameSpeedTurbo1ModifierLayout">
                     <text id="GameSpeedTurbo1ModifierLabel">config.hotkey_modifier.name</text>
@@ -67,7 +77,9 @@
     <hlayout id="GameSpeedTurbo2Layout">
         <vlayout id="GameSpeedTurbo2Group" border="true">
             <title>config.game_speed_turbo_2.title</title>
-            <text id="GameSpeedTurbo2Description">config.preset.description</text>
+            <hlayout>
+                <text id="GameSpeedTurbo2Description" width="1.0">config.preset.description</text>
+            </hlayout>
 
             <topic>config.preset_multiplier.title</topic>
             <input id="GameSpeedTurbo2MultiplierInput" char_limit="12">
@@ -75,7 +87,9 @@
             </input>
 
             <topic>config.preset_hotkey.title</topic>
-            <text id="GameSpeedTurbo2HotkeyDescription">config.preset_hotkey.description</text>
+            <hlayout>
+                <text id="GameSpeedTurbo2HotkeyDescription" width="1.0">config.preset_hotkey.description</text>
+            </hlayout>
             <hlayout id="GameSpeedTurbo2HotkeyLayout">
                 <vlayout id="GameSpeedTurbo2ModifierLayout">
                     <text id="GameSpeedTurbo2ModifierLabel">config.hotkey_modifier.name</text>
@@ -100,7 +114,9 @@
     <hlayout id="GameSpeedTurbo3Layout">
         <vlayout id="GameSpeedTurbo3Group" border="true">
             <title>config.game_speed_turbo_3.title</title>
-            <text id="GameSpeedTurbo3Description">config.preset.description</text>
+            <hlayout>
+                <text id="GameSpeedTurbo3Description" width="1.0">config.preset.description</text>
+            </hlayout>
 
             <topic>config.preset_multiplier.title</topic>
             <input id="GameSpeedTurbo3MultiplierInput" char_limit="12">
@@ -108,7 +124,9 @@
             </input>
 
             <topic>config.preset_hotkey.title</topic>
-            <text id="GameSpeedTurbo3HotkeyDescription">config.preset_hotkey.description</text>
+            <hlayout>
+                <text id="GameSpeedTurbo3HotkeyDescription" width="1.0">config.preset_hotkey.description</text>
+            </hlayout>
             <hlayout id="GameSpeedTurbo3HotkeyLayout">
                 <vlayout id="GameSpeedTurbo3ModifierLayout">
                     <text id="GameSpeedTurbo3ModifierLabel">config.hotkey_modifier.name</text>
